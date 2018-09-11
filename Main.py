@@ -2,7 +2,6 @@ from Creatures import *
 
 class Main:
     creatures = []
-    eggs = []
     commonwWeight = 0
     maxWeightValue = 0
     maxWeightName = ''
@@ -15,7 +14,7 @@ class Main:
 
     def run(self):
         for creature in self.creatures:
-            print(creature.typeCreature, creature.name, creature.weight)
+            print(creature.typeCreature, creature.name, creature.weight, 'кг')
             if creature.weight > self.maxWeightValue:
                 self.maxWeightValue = creature.weight
                 self.maxWeightName = creature.typeCreature
