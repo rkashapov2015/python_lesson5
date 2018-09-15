@@ -1,6 +1,6 @@
-from Main import Main
+from common import Common
 
-listCreatures = [
+list_creatures = [
     {'name': 'Серый', 'weight': 10, 'className': 'Goose'},
     {'name': 'Белый', 'weight': 13, 'className': 'Goose'},
     {'name': 'Манька', 'weight': 203, 'className': 'Cow'},
@@ -13,6 +13,5 @@ listCreatures = [
     {'name': 'Кряква', 'weight': 20, 'className': 'Duck'}
 ]
 
-main = Main(listCreatures)
-
-main.run()
+common = Common(list_creatures)
+common.run()

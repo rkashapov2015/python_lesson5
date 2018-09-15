@@ -1,8 +1,11 @@
+
+
 class Creature:
     name = ''
     weight = 0
-    typeCreature = 'Существо'
+    type_creature = 'Существо'
     voice = 'Liar, lawyer, mirror, show me. What\'s the difference?'
+
     def __init__(self, name, weight):
         self.name = name
         self.weight = weight
@@ -22,44 +25,54 @@ class Creature:
     def getParents(self):
         return type(self).__bases__
 
+
 class Bird(Creature):
-    typeCreature = 'Птица'
+    type_creature = 'Птица'
     def getEgg(self):
         print('Сбор яиц')
 
+
 class Chicken(Bird):
     voice = 'Ko ko ko'
-    typeCreature = 'Курица'
+    type_creature = 'Курица'
+
 
 class Duck(Bird):
     voice = 'Wat wat wat'
-    typeCreature = 'Утка'
+    type_creature = 'Утка'
     
+
 class Goose(Bird):
     voice = 'Gooooooosebumps'
-    typeCreature = 'Гусь'
+    type_creature = 'Гусь'
 
     def pinch(self):
         print('Ущипнуть за бок')
 
+
 class Livestock(Creature):
     voice = 'So who are you to wave your finger?'
+
 
 class LivestockMilk(Livestock):
     def milk(self):
         print('Подоить')
 
+
 class Cow(LivestockMilk):
     voice = 'Muuuuuu'
-    typeCreature = 'Корова'
+    type_creature = 'Корова'
+
 
 class Goat(LivestockMilk):
     voice = 'Beeeee'
-    typeCreature = 'Коза'
+    type_creature = 'Коза'
+
 
 class Sheep(Livestock):
     voice = 'Beeeee'
-    typeCreature = 'Овца'
+    type_creature = 'Овца'
 
     def shear(self):
         print('Подстричь')
+
