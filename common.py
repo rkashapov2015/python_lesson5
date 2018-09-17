@@ -1,7 +1,7 @@
 from creatures import *
 
 
-class Common:
+class Farm:
     creatures = []
     common_weight = 0
     max_weight_value = 0
@@ -31,7 +31,7 @@ class Common:
                 creature.shear()
 
             if Bird in creature.getParents():
-                creature.getEgg()
+                creature.get_egg()
             
             if type(creature) is Goose:
                 creature.pinch()

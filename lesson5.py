@@ -1,4 +1,4 @@
-from common import Common
+from common import Farm
 
 list_creatures = [
     {'name': 'Серый', 'weight': 10, 'className': 'Goose'},
@@ -13,5 +13,5 @@ list_creatures = [
     {'name': 'Кряква', 'weight': 20, 'className': 'Duck'}
 ]
 
-common = Common(list_creatures)
-common.run()
+farm = Farm(list_creatures)
+farm.run()
