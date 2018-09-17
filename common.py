@@ -9,7 +9,7 @@ class Farm:
 
     def __init__(self, list_creatures):
         for element in list_creatures:
-            creature_object = self.createObject(element['className'], element['name'], element['weight'])
+            creature_object = self.create_object(element['className'], element['name'], element['weight'])
             if creature_object:
                 self.creatures.append(creature_object)
         
@@ -41,7 +41,7 @@ class Farm:
         print(f'Общий вес составил {self.common_weight} кг')
         print(f'Самое тяжелое животное это {self.max_weight_name}')
 
-    def createObject(self, class_name_text, name='', weight=0):
+    def create_object(self, class_name_text, name='', weight=0):
         try:
             class_name = globals()[class_name_text]
             creature_object = class_name(name, weight)
