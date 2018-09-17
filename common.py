@@ -2,12 +2,13 @@ from creatures import *
 
 
 class Farm:
-    creatures = []
-    common_weight = 0
-    max_weight_value = 0
-    max_weight_name = ''
-
+    
     def __init__(self, list_creatures):
+        self.creatures = []
+        self.common_weight = 0
+        self.max_weight_value = 0
+        self.max_weight_name = ''
+
         for element in list_creatures:
             creature_object = self.create_object(element['className'], element['name'], element['weight'])
             if creature_object:
@@ -21,16 +22,16 @@ class Farm:
                 self.max_weight_name = creature.type_creature
 
             self.common_weight += creature.weight
-            creature.getVoice()
+            creature.get_voice()
             creature.feed()
 
-            if LivestockMilk in creature.getParents():
+            if LivestockMilk in creature.get_parents():
                 creature.milk()
 
             if type(creature) is Sheep:
                 creature.shear()
 
-            if Bird in creature.getParents():
+            if Bird in creature.get_parents():
                 creature.get_egg()
             
             if type(creature) is Goose:
